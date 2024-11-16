@@ -1,0 +1,33 @@
+body{
+    margin: 1rem;
+    /* background-color: aqua; */
+}
+table{
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+    /* padding: 20px; */
+}
+table th{
+    padding: 20px;
+}
+ td{
+    padding: 20px;
+}
+.dtn{
+    padding: 10px;
+    background-color: aqua;
+    border: none;
+    outline: 0;
+    border: 10px;
+}
+.btn:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+td a{
+    text-decoration: none;
+    border: 1px solid aqua;
+    border-radius: 10px;
+    background-color: aqua;
+    padding: 10px;
+}

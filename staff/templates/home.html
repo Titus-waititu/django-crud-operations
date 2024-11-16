@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <!-- <a href="" ></a> -->
+    <h1>Homepage is here</h1>
+    <table border="1">
+      <tr>
+        <th>Id</th>
+        <th>Image</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Department</th>
+        <th>Salary</th>
+        <th>Actions</th>
+      </tr>
+      {% for person in staff %}
+      <tr>
+        <td>{{person.id}}</td>
+        <td>
+          <img src="media/{{person.image}}" alt="" width="50"/>
+        </td>
+        <td>{{person.fname}}</td>
+        <td>{{person.lname}}</td>
+        <td>{{person.age}}</td>
+        <td>{{person.department}}</td>
+        <td>{{person.salary}}</td>
+        <td>
+            <a href="{% url 'staff:update_details' person.id %}">Edit</a>
+            <a href="{% url 'staff:delete' person.id %}">Delete</a>
+        </td>
+
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

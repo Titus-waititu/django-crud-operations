@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert data</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <label for="">upload image</label><br>
+        <input type="file" name="image" value="{{staff.image}}" required><br>
+        <input type="text" placeholder="First Name" name="fname" value="{{staff.fname}}" required><br>
+        <input type="text" placeholder="Last Name" name="lname" value="{{staff.lname}}" required><br>
+        <input type="text" placeholder="Age" name="age" value="{{staff.age}}" required><br>
+        <input type="text" placeholder="Department" name="department" value="{{staff.department}}" required><br>
+        <input type="text" placeholder="Salary(no comas)" name="salary" value="{{staff.salary}}" required><br>
+        <input type="submit" value="Update staff" class="btn">
+    </form>
+</body>
+</html>
